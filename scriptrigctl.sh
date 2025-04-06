@@ -1,9 +1,10 @@
 inittime=$(pwsh -c "[DateTimeOffset]::UtcNow.ToUnixTimeMilliseconds()")
 echo $inittime
-path="$HOME/Downloads/output.txt"
-echo "" >  $path
-
-date > $path
+date
+datee=$(date)
+path="$HOME/Downloads/$datee.txt"
+echo $inittime > $path
+date >> $path
 {
   echo "U RECORD 1"
   while true; do
